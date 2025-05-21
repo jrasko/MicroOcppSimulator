@@ -1,0 +1,10 @@
+name: micro-ocpp-simulator
+services:
+  simulator:
+    container_name: ocpp-simulator
+    build: .
+    image: matthx/microocppsimulator
+    volumes:
+      - ./mo_store:/MicroOcppSimulator/mo_store
+    ports:
+      - "8000:8000"
